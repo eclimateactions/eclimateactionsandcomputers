@@ -14,32 +14,20 @@ nav a{color:white;margin:0 12px;text-decoration:none;font-weight:bold}
 section{padding:50px 20px}
 
 .hero{
-min-height:80vh;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
-background:
+align-items:center;
+background-image:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1920&q=80");
+background-repeat:no-repeat;
+background-position:center center;
 background-size:cover;
-background-position:center;
 color:white;
 text-align:center;
-}
-
-.hero h1{font-size:42px}
-.btn{display:inline-block;background:#1bbf8f;color:white;padding:12px 25px;border-radius:6px;text-decoration:none}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:white;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
-
-form{max-width:500px;margin:auto}
-input,textarea,select{width:100%;padding:12px;margin:10px 0;border-radius:6px;border:1px solid #ccc}
-
-footer{background:#063128;color:white;text-align:center;padding:30px;font-size:14px}
-
-@media(max-width:600px){
-.hero h1{font-size:28px}
+padding:40px 20px;
 }
 </style>
 </head>
@@ -92,18 +80,25 @@ footer{background:#063128;color:white;text-align:center;padding:30px;font-size:1
 <h2>Join Us</h2>
 <p>Fill the form below and become part of the movement.</p>
 
-<form>
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<input type="tel" placeholder="Phone Number">
-<select>
+<form action="https://formsubmit.co/eclimateactions@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="New Registration - E-Climate Actions">
+
+<input type="text" name="Name" placeholder="Full Name" required>
+<input type="email" name="Email" placeholder="Email Address" required>
+<input type="tel" name="Phone" placeholder="Phone Number">
+
+<select name="Interest">
 <option>Volunteer</option>
 <option>Partner</option>
 <option>Donor</option>
 <option>Service Client</option>
 </select>
-<textarea placeholder="Your Message"></textarea>
+
+<textarea name="Message" placeholder="Your Message"></textarea>
+
 <button class="btn" type="submit">Submit</button>
+
 </form>
 </section>
 
@@ -120,3 +115,4 @@ footer{background:#063128;color:white;text-align:center;padding:30px;font-size:1
 
 </body>
 </html>
+
